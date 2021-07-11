@@ -1,0 +1,20 @@
+#!/usr/bin/env node
+const program = require('commander')
+const logger = require('../lib/logger')
+
+logger.logo('Yang CLI')
+
+program
+  .command('create <app-name>')
+  .description('create a new project')
+  .option('-f, --force', 'overwrite directory if it exists')
+  .action(require('../lib/create'))
+
+program
+  .version(`v${require('../package.json').version}`)
+  .usage('<command> [option]')
+
+program.parse(process.argv)
+
+
+
