@@ -6,9 +6,24 @@ logger.logo('Yang CLI')
 
 program
   .command('create <app-name>')
-  .description('create a new project')
+  .description('create a new project powered by yang-cli')
   .option('-f, --force', 'overwrite directory if it exists')
   .action(require('../lib/create'))
+
+program
+  .command('route <route-name>')
+  .description('install route and generate page in an already created project')
+  .action(require('../lib/route'))
+
+program
+  .command('component <component-name>')
+  .description('generate component in an already created project')
+  .action(require('../lib/component'))
+
+program
+  .command('request <request-name>')
+  .description('generate request module in an already create project')
+  .action(require('../lib/request'))
 
 program
   .version(`v${require('../package.json').version}`)
