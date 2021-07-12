@@ -36,12 +36,64 @@
                 "after": true
             }
         ],
+        "block-spacing": [
+            "error",
+            "always"
+        ],
         "no-unused-vars": [
             "error",
             {
                 "vars": "all",
                 "args": "none"
             }
+        ],
+        "no-const-assign": "error",
+        "prefer-const": "error",
+        "no-new-object": "error",
+        "no-var": "error",
+        "no-array-constructor": "error",
+        "no-eval": "error",
+        "object-curly-spacing": [
+            "error",
+            "always",
+            {
+                "objectsInObjects": false
+            }
+        ],
+        "space-before-blocks": [
+            "error",
+            "always"
+        ],
+        "space-before-function-paren": [
+            "error",
+            "always"
+        ],
+        "space-infix-ops": "error",
+        "space-unary-ops": [
+            "error",
+            {
+                "words": true,
+                "nonwords": false
+            }
+        ],
+        "spaced-comment": [
+            "error",
+            "always",
+            {
+                "markers": [
+                    "global",
+                    "globals",
+                    "eslint",
+                    "eslint-disable",
+                    "*package",
+                    "!",
+                    ","
+                ]
+            }
+        ],
+        "wrap-iife": [
+            "error",
+            "any"
         ]
     }
 }
